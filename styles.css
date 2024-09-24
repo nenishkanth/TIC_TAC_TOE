@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #282c34; /* Dark background color for contrast */
+    color: #ffffff; /* White text color */
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #61dafb; /* Vibrant blue color */
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 20px auto;
+    width: 320px;
+    padding: 10px;
+    background-color: #20232a; /* Darker background for the game board */
+    border-radius: 8px; /* Rounded corners for the board */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #61dafb; /* Light blue color for empty cells */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #20232a; /* Dark border for contrast */
+    transition: background-color 0.3s ease;
+    border-radius: 8px; /* Rounded corners for cells */
+}
+
+.cell.clicked-by-user1 {
+    background-color: #ff6f61; /* Vibrant coral color for user 1 (X) */
+    color: #ffffff; /* White text color for better contrast */
+}
+
+.cell.clicked-by-user2 {
+    background-color: #fdd835; /* Vibrant yellow color for AI (O) */
+    color: #ffffff; /* White text color for better contrast */
+}
+
+.cell:hover {
+    background-color: #4caf50; /* Green color on hover */
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: #61dafb;
+    color: #282c34;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #21a1f1; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
